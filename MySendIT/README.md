@@ -1,20 +1,19 @@
 # Send It
 Send It is basically a platform where people can make a parcel order and deliver orders
 
-#### Getting Started
+####Getting Started
 clone the project using the [link](https://github.com/ekwaro/Send.git)
-#### Prerequisites
-
- A browser with internet access
-#### Installing
+####Prerequisites
+A browser with internet access
+####Installing
 * clone the project on your local machine
 ~~~
 https://github.com/ekwaro/Send/blob/master/UI/admin/main.html
 ~~~
- ##### Accessing the frontend of the application
+#####Accessing the frontend of the application
 The front-end of the application is hosted on gh pages and can be accessed from [here](https://github.com/ekwaro/Send/blob/master/UI/admin/main.html)
 
-## Features
+##Features
 
 * Users can create an account and login
 * Users can create a parcel delivery order
@@ -24,7 +23,7 @@ The front-end of the application is hosted on gh pages and can be accessed from 
 * Admin can change the status and present location of a parcel delivery order
  
 
-### End points
+###End points
  HTTP method|End point|functionality 
  -----------|---------|--------------
  GET|/api/v1/parcels|Fetch all parcel delivery order
@@ -33,16 +32,15 @@ The front-end of the application is hosted on gh pages and can be accessed from 
  PUT|/api/parcels/<parcelId>/cancel|cancel the specific parcel delivery order
  POST|/api/v1/parcels/|create a parcel delivery order
  
- ### Tools Used
+ ###Tools Used
  * [Flask](http://flask.pocoo.org/)
  * [Virtual Environment](https://virtualenv.pypa.io/en/stable/) - Used to create an isolated virtual environment
  * [PIP](https://pip.pypa.io/en/stable/) - A python package installer
  
  ### Deployment
- 
  The API is hosted on [Heroku]()
- 
- ### Built with 
+ ## Built with 
  * python/ Flask
- ### Authors
- Ekwaro Dominic
+ ###Authors
+ Ekwaro 
+
