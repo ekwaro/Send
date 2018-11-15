@@ -8,12 +8,13 @@ goods = []
 class Views:
     @staticmethod
     def get_views(app):
-
+        @app.route('/')
+        def homepage():
+            return 'Welcome to SendIt', 200
 
         @app.route('/api/v1/parcels/', methods=['GET'])
         def get_parcels():
             return jsonify({
                 "message": "Your parcels are here",
                 "parcels": parcels
-            }), 200
-
+        }), 200
