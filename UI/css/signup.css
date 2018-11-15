@@ -25,7 +25,7 @@ body{
 	height: auto;
 	margin-left: 0px;
 	color: brown;
-
+	
 
 }
 .main_home_content p{
@@ -46,7 +46,7 @@ body{
 .home_content{
 	background-color: #FFFFFF;
 	margin-left: 500px;
-
+	
 }
 header{
 	background-color: #293819;
@@ -63,18 +63,14 @@ header{
 	padding: 8px;
 	border: none;
 	background: #f44842;
-	margin-right: 10px;
 	margin-right: 15px;
 }
 #logout:hover{
 	background: #a01e18;
 
 }
-h1{
-	text-align: center;
-	color: #ffffff;
 h2{
-
+	
 	color: #ffffff;
 	margin-top: 0px;
 	margin-left: 100px;
@@ -91,8 +87,6 @@ b{
 }
 .drawer{
 	height: 500px;
-	width: 50%;
-	background:  #293819;
 	width: 30%;
 	background:  #293819;
 	border-radius: 5px;
@@ -113,16 +107,13 @@ b{
 	color: #ffffff;
 	list-style-type: none;
 
-}
+} 
 .body_wrapper{
 	margin: 10px;
 }
 form{
 		display:inline-block;
 		margin: 20px 0px 0px 20px;
-		width: 100%;
-		background-color: #ffffff;
-		border-radius: 3px;
 		background-color: #ffffff;
 		border-radius: 3px;
 		height: 450px;
@@ -149,15 +140,11 @@ p{
 }
 input{margin: 20px;
 	width: 100%;
-input{
-	margin: 20px;
-	width: 90%;
 	padding: 4px;
 	border-radius: 3px; 
 }
 button{
 	margin:0px 40px;
-	margin: 20px 40px;
 	border-radius: 3px;
 	padding: 7px;
 	width: 80px;
@@ -168,9 +155,6 @@ button:hover{
 	background: #054f1c;
 }
 .signup{
-	margin: 30px 200px;
-	background: #ffffff;
-	height: 90%;
 	margin: 30px 400px;
 	background: #ffffff;
 	height: 60%;
@@ -190,7 +174,6 @@ button:hover{
 #cancel:hover{
 	background: #681d11;
 }
-
 [notifications]{
 	position: relative;
 }
@@ -214,7 +197,6 @@ table, th, td{
 	border:2px solid #ffffff;
 	margin: 0px;
 
-	margin-top: 20px;
 	border-radius: 5px;
 }
 th,td{
@@ -227,7 +209,6 @@ table tr:nth-child(even):hover{
 background-color: #e1e8e3;
 }
 .table_wrapper{
-	background: #f1f1c1;
 	background:#b3c2db;
 	margin: 0px 150px;
 }
