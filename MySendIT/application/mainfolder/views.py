@@ -11,6 +11,39 @@ class Views:
         def homepage():
             return 'Welcome to SendIt', 200
 
+        @app.route('/api/v1/parcels/', methods=['GET'])
+        def get_parcels():
+            if len(parcels) >0:
+                return jsonify({
+                 "message": "Your parcels are here",
+                 "parcels": parcels
+            }), 200
+            else:
+                return jsonify({'Message':'Parcels are not yet created'})
+
+        @app.route('/api/v1/parcels/<int:parcelId>', methods=['GET'])
+        def get_parcel_by_id(parcelId):
+            for parcel in parcels:
+                if parcel['parcelId'] == parcelId:
+                    return jsonify({
+                        "Message": "Here is the parcel you requested for",
+                        "parcel": parcel
+                    }), 200
+                else:
+                    return jsonify({'Message': 'parcel Id not found'}), 404
+
+        @app.route('/api/v1/parcels/<int:parcelId>/cancel/', methods=['PUT'])
+        def edit_parcels(parcelId):
+            for parcel in parcels:
+                if parcel['parcelId'] == parcelId:
+                    parcel['current_state'] = False
+                    return jsonify({
+                            'Message': 'parcel cancelled',
+                            'parcel': parcel
+                    }), 200
+                else:
+                    return jsonify({'Message':'Item with the given Id does not exist'}), 404
+
         @app.route('/api/v1/parcels/', methods=['POST'])
         def add_parcel_order():
             order = request.get_json()
@@ -48,4 +81,17 @@ class Views:
                         'parcels':parcel_order
                     }), 201
 
+        @app.route('/api/v1/users/<int:userId>/parcels/', methods=['GET'])
+        def get_all_orders_for_particular_user(userId):
+            user_parcels = []
+            for person in parcels:
+                if person['userId'] == userId:
+                    user_parcels.append(person)
+
+            if len(user_parcels) > 0:
+                return jsonify({"Message":"All parcel order created is displayed below",
+                                "user_data": user_parcels}), 200
+
+            else:
+                return jsonify({"user_parcels": "user does not exist"}), 404
 
