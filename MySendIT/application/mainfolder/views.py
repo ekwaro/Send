@@ -94,4 +94,3 @@ class Views:
 
             else:
                 return jsonify({"user_parcels": "user does not exist"}), 404
-
